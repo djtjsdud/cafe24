@@ -2,6 +2,9 @@ body, html{
     font-size: 16px;
     letter-spacing: -0.025rem;
 }
+a{
+    display: block;
+}
 a:hover{
     text-decoration: none;
 }
@@ -88,14 +91,25 @@ a:hover{
     height: 14rem;
     opacity: 0;
     visibility: hidden;
+    gap: 20px;
 }
 #header .topArea .xans-layout-category .position .category_depth:hover .sub-list-box{
     opacity: 1;
     visibility: visible;
 }
+#header .topArea .xans-layout-category .position .category_depth .sub-list-box .sub-category-list:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 14%;
+}
+#header .topArea .xans-layout-category .position .category_depth .sub-list-box .sub-category-list:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 42%;
+}
 
 #header .topArea .xans-layout-category .position .category_depth .sub-list-box .sub-category-list{
-    width: 10%;
+    width: 12%;
     text-align: center;
     margin: 0 0 2rem;
 }
@@ -203,57 +217,111 @@ a:hover{
 }
 
 /*푸터 좌측*/
+#footer .inner .xans-layout-footer .footer-left{
+    font-size: .75rem;
+}
+#footer .inner .xans-layout-footer .footer-left .footer-left-top{
+    margin-bottom: 3.75rem;
+}
+#footer .inner .xans-layout-footer .footer-left .contact-number{
+    font-size: 1rem;
+}
 #footer .inner .xans-layout-footer .footer-left .contact-box{
     margin: 1.25rem 0;
-    font-size: .75rem;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: #666;
-}
-#footer .inner .xans-layout-footer .footer-left .copyright {
-    position: relative;
-    font-size: 12px;
-    line-height: 0;
-    margin-top: .375rem;
+    font-size: 14px;
 }
 #footer .inner .xans-layout-footer .footer-left .contact-btn{
     display: flex;
     gap: .9375rem;
     text-align: center;
-    margin-bottom: 60px;
 }
 #footer .inner .xans-layout-footer .footer-left .contact-btn > li a{
     display: block;
     width: 144px;
     padding: .625rem 0;
     color: #fff;
+    transition: all 0.1s ease-in-out;
 }
-#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn1{
+#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn1 a{
     background-color: #000;
+    border: solid 1px #000;
+    box-sizing: border-box;
 }
-#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn2{
+#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn1 a:hover{
+    background: transparent;
+    color: #000;
+}
+#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn2 a{
     background-color: #666666;
+    border: solid 1px #666;
+    box-sizing: border-box;
+}
+#footer .inner .xans-layout-footer .footer-left .contact-btn .contact-btn2 a:hover{
+    background-color: transparent;
+    color: #000;
+}
+#footer .inner .xans-layout-footer .footer-left .footer-left-bottom {
+    color: #9a9a9a;
 }
 #footer .inner .xans-layout-footer .footer-left .utilMenu {
     display: flex;
-    gap: 20px;
+    gap: .875rem;
+    overflow: hidden;
+    height: fit-content;
+    line-height: normal;
 }
 #footer .inner .xans-layout-footer .footer-left .utilMenu > li{
     float: none;
     background: none;
     padding: 0;
 }
-#footer .inner .xans-layout-footer .lush-family-site{
-    display: flex;
+#footer .inner .xans-layout-footer .footer-left .utilMenu > li a{
+    display: block;
+    color: #9a9a9a;
+}
+#footer .inner .xans-layout-footer .footer-left .utilMenu > li:hover a{
+    color: #000;
+}
+#footer .inner .xans-layout-footer .footer-left .copyright {
+    position: relative;
+    line-height: normal;
+    margin-top: .375rem;
+    height: fit-content;
+    font-size: .75rem;
 }
 
 /* 푸터 우측 */
 #footer .inner .xans-layout-footer .footer-right{
     width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#footer .inner .xans-layout-footer .footer-right .family-site-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer .inner .xans-layout-footer .family-site-box .lush-family-site{
+    display: flex;
+    align-items: center;
+    gap: .625rem;
 }
 #footer .inner .xans-layout-footer .footer-right .footer-menu{
     display: flex;
     text-align: center;
     flex-wrap: wrap;
+    text-align: left;
+}
+#footer .inner .xans-layout-footer .footer-right .footer-menu > li{
+    width: 50%;
+    margin-bottom: .375rem;
+}
+#footer .inner .xans-layout-footer .footer-right .footer-menu > li:nth-child(2), 
+#footer .inner .xans-layout-footer .footer-right .footer-menu > li:nth-child(4){
+    text-align: right;
+    color: #666;
 }
