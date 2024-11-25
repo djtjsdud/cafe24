@@ -8,10 +8,20 @@ a{
 a:hover{
     text-decoration: none;
 }
+#main #wrap{
+    margin: 0;
+}
+#main #wrap #container{
+    width: 100%;
+}
 #main #wrap #container #contents{
     float: none;
     margin: 0 auto;
+    width: 100%;
+}
+#main .container{
     width: 1680px;
+    margin: 0 auto;
 }
 
 /* 헤더영역 */
@@ -119,7 +129,7 @@ a:hover{
 #header .topArea .xans-layout-category .position .category_depth .sub-list-box .sub-category-list .sub-menu a{
     display: inline-flex;
     flex-direction: column;
-    line-height: 3;
+    line-height: 44px;
     color: #949494;
     margin: 0 1rem;
     position: relative;
@@ -153,7 +163,7 @@ a:hover{
     top: 100%;
     left: 0;
     position: absolute;
-    height: 14rem;
+    height: 15rem;
     z-index: 98;
     transition: all .2s ease-in-out;
     opacity: 0;
@@ -324,4 +334,89 @@ a:hover{
 #footer .inner .xans-layout-footer .footer-right .footer-menu > li:nth-child(4){
     text-align: right;
     color: #666;
+}
+
+/* 메인배너 슬라이드 영역 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    width: 12%;
+    color: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 75px);
+    top: var(--swiper-pagination-top, auto);
+    left: calc(50% - 25px);
+    color: #000;
+    border-radius: 14px;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 50px;
+    height: 24px;
+    font-size: .875rem;
+}
+
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* 검정색 반투명 딤드 효과 */
+    z-index: 1; /* 이미지 위에 위치하도록 설정 */
+}
+
+.visual .swiper .swiper-wrapper .swiper-slide{
+    position: relative;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: calc(50% - 83px);
+    left: 180px;
+    color: #fff;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-main-text{
+    font-size: 3.5rem;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-sub-text{
+    font-size: 1.5rem;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn a{
+    color: #fff;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn img{
+    width: 12px;
+    height: 12px;
 }
