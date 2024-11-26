@@ -88,7 +88,7 @@ a:hover{
     display: block;
     line-height: 5;
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 #header .topArea .xans-layout-category .position .category_depth .sub-list-box{
     position: absolute;
@@ -133,6 +133,7 @@ a:hover{
     color: #949494;
     margin: 0 1rem;
     position: relative;
+    font-size: .875rem;
 }
 #header .topArea .xans-layout-category .position .category_depth .sub-category-list .sub-menu a:hover{
     color: #000;
@@ -173,6 +174,10 @@ a:hover{
 #header .inner .topArea .xans-element-.xans-layout.xans-layout-logotop{
     width: 100px;
     margin: 0;
+}
+#header .topArea .xans-layout-category .category_depth > li,
+.category_depth > .xans-record-{
+    display: none;
 }
 
 .util-menu{
@@ -356,6 +361,17 @@ a:hover{
     object-fit: cover;
 }
 
+.swiper-slide .banner-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* 가운데까지만 그라데이션이 적용되도록 설정 */
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); /* 왼쪽에서 오른쪽으로 연한 그라데이션 */
+    z-index: 1;
+}
+
 .swiper-button-next, .swiper-button-prev {
     width: 12%;
     color: #fff;
@@ -394,24 +410,42 @@ a:hover{
     color: #fff;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     position: absolute;
     top: calc(50% - 83px);
     left: 180px;
     color: #fff;
+    z-index: 2;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-main-text{
-    font-size: 3.5rem;
+    font-size: 3.125rem;
+    margin-bottom: .375rem;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-sub-text{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text2{
+    text-align: center;
+    left: calc(50% - 275px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn{
     display: flex;
     align-items: center;
     gap: 4px;
+    transform: translateY(20px);
+    width: fit-content;
+    padding-bottom: 8px;
+    font-size: .875rem;
+}
+.visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: bottom 0.5s;
+    box-sizing: border-box;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn a{
     color: #fff;
@@ -419,4 +453,127 @@ a:hover{
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .more-btn img{
     width: 12px;
     height: 12px;
+}
+
+/* 신상품 */
+
+.tab-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-box .tab-menu-box{
+    width: 18%;
+    text-align: center;
+}
+.tab-box .tab-menu-box .new-title{
+    font-size: 1.5rem;
+    margin-bottom: 2.125rem;
+}
+
+.tab-box .tab-menu-box .tab-menu{
+    font-size: 1.75rem;
+}
+.tab-box .tab-menu-box .tab-menu{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab-box .tab-menu-box .tab-menu .nav-item .nav-link.active{
+    display: block;
+    color: #10A47A;
+}
+.tab-box .tab-menu-box .tab-menu .nav-item .nav-link{
+    color: #ddd;
+}
+.tab-box .tab-content{
+    width: 82%;
+    max-width: 1380px;
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tab-box .tab-content #bath,
+.tab-box .tab-content #shower,
+.tab-box .tab-content #body,
+.tab-box .tab-content #hair{
+    width: 100%;
+}
+
+.tab-box .tab-content #bath .ec-base-product.swiper.mySwiper.new-swiper ul.grid5.swiper-wrapper > li.swiper-slide {
+    width: 300px !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tab-box .tab-content #bath .ec-base-product.new-swiper ul.grid5 > li.swiper-slide::after {
+    position: relative;
+}
+.tab-box .tab-content #bath .ec-base-product ul.grid5 li .thumbnail {
+    width: 100%;
+    float: none;
+}
+.tab-box .tab-content #bath .ec-base-product .prdList .thumbnail a img {
+    width: 90%;
+}
+
+/* 에디션 영역 */
+
+.limit{
+    display: flex;
+    justify-content: space-between;
+}
+.limit .edition{
+    width: 49%;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.limit .edition1{
+    background: url("/images/edition1-bg-img.jpg") no-repeat center / cover;
+}
+.limit .edition2{
+    background: url("/images/edition2-bg-img.jpg") no-repeat center / cover;
+}
+.limit .edition1::after,
+.limit .edition2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 검정색 반투명 딤드 효과 */
+    z-index: 1; /* 이미지 위에 위치하도록 설정 */
+}
+.limit .edition .img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 580px;
+    height: 450px;
+    position: relative;
+    z-index: 2;
+}
+.limit .edition .edition-object{
+    font-size: 1.125rem;
+    z-index: 2;
+    color: #FF0086;
+    margin-bottom: .875rem;
+}
+.limit .edition .edition-title{
+    font-size: 2.625rem;
+    color: #fff;
+    z-index: 2;
+    margin-bottom: 2.5rem;
+}
+.limit .edition .img-box img{
+    display: block;
 }
