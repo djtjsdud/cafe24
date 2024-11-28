@@ -1,26 +1,29 @@
 
 // 메인배너 슬라이드
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper("#main_slide.mySwiper", {
     loop: true,
     // autoplay: {
     //     delay: 2500,
     //     disableOnInteraction: false,
     // },
     pagination: {
-        el: ".swiper-pagination",
+        el: "#main_slide .swiper-pagination",
         type: "fraction",
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: "#main_slide .swiper-button-next",
+        prevEl: "#main_slide .swiper-button-prev",
     },
 });
 
+// 신상품 슬라이드
 var newSwiper = new Swiper(".mySwiper.new-swiper", {
-    slidesPerView: 5,
-    spaceBetween: 20,
     loop: true,
+    slidesPerView: 5,
+    slidesPerGroup: 5,    
+    spaceBetween: 20, 
+    loopAdditionalSlides: 5,  
     pagination: {
         el: ".new-swiper .swiper-pagination",
         clickable: true,

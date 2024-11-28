@@ -469,6 +469,7 @@ a:hover{
 .tab-box .tab-menu-box .new-title{
     font-size: 1.5rem;
     margin-bottom: 2.125rem;
+    font-weight: 400;
 }
 
 .tab-box .tab-menu-box .tab-menu{
@@ -527,8 +528,13 @@ a:hover{
     display: flex;
     justify-content: space-between;
 }
-.limit .edition{
+.limit .left,
+.limit .right{
     width: 49%;
+    position: relative;
+}
+.limit .edition{
+    width: 100%;
     height: 850px;
     display: flex;
     flex-direction: column;
@@ -566,13 +572,12 @@ a:hover{
     font-size: 1.125rem;
     z-index: 2;
     color: #FF0086;
-    margin-bottom: .875rem;
 }
 .limit .edition .edition-title{
     font-size: 2.625rem;
     color: #fff;
     z-index: 2;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
 }
 .limit .edition .img-box img{
     display: block;
@@ -580,15 +585,19 @@ a:hover{
 .limit .edition .more-btn{
     display: block;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    align-items: center;
-    gap: 4px;
-    transform: translateY(20px);
-    width: fit-content;
-    padding-bottom: 8px;
+    right: 30px;
+    bottom: 30px;
+    color: #fff;
     font-size: .875rem;
-    position: relative;
+    z-index: 2;
+}
+.limit .edition .more-btn::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 8px;
 }
 
 /* 러쉬 랭킹 영역 */
