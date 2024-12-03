@@ -18,14 +18,15 @@ var swiper = new Swiper("#main_slide.mySwiper", {
 });
 
 // 신상품 슬라이드
-var newSwiper = new Swiper(".mySwiper.new-swiper", {
-    loop: true,
-    slidesPerView: 5,
-    slidesPerGroup: 5,    
-    spaceBetween: 20, 
-    loopAdditionalSlides: 5,  
-    pagination: {
-        el: ".new-swiper .swiper-pagination",
-        clickable: true,
-    },
-});
+
+setTimeout(()=> {
+    const newSwiper = new Swiper("#bath .new-swiper", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20, 
+        pagination: {
+            el: "#bath .swiper-pagination",
+            clickable: true,
+        },
+    });
+}, 500);
