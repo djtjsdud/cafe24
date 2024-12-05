@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+    
     <!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
     <!--@css(/layout/basic/css/layout.css)-->
     <!--@css(/layout/basic/css/ec-base-ui.css)-->
@@ -39,12 +39,14 @@
     <!--@js(/js/login_redirect.js)-->
     <!--@js(/bootstrap/js/bootstrap.js)-->
     <!--@js(/layout/basic/js/eo.js)-->
+    <!--@js(/js/module/product/sale_price.js)-->
 </head>
 <body>
 <div id="skipNavigation">
     <p><a href="#category">전체상품목록 바로가기</a></p>
     <p><a href="#contents">본문 바로가기</a></p>
 </div>
+
 <!--@import(/layout/basic/header.html)-->
 <hr class="layout" />
 
@@ -53,11 +55,11 @@
         <div id="contents">
             <!--@contents-->
         </div><hr class="layout" />
-<!-- 사이드바 자리 -->
-    </div><hr class="layout" />
-
+    </div>
+    <hr class="layout" />
 <!--@import(/layout/basic/quick.html)-->
-</div><hr class="layout" />
+</div>
+<hr class="layout" />
 
 <!--@import(/layout/basic/footer.html)-->
 
@@ -77,42 +79,12 @@
         </div>
     </div>
 </div>
-<!-- // 결제를 위한 필수 영역 -->
 
-<div module="Layout_multishopShipping">
-    <!--@css(/layout/basic/css/ec-base-layer.css)-->
-    <!--@css(/css/module/layout/multishopShipping.css)-->
-    <!--@js(/js/module/layout/multishopShipping.js)-->
-    <div class="dimmed"></div>
-    <div class="worldshipLayer ec-base-layer">
-        <div class="header">
-            <h3>WORLD SHIPPING</h3>
-        </div>
-        <div class="content">
-            <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
-            <div class="select">
-                <select module="Layout_multishopShippingCountrylist">
-                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
-                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
-                </select>
-            </div>
-            <div class="select">
-                <select module="Layout_multishopShippingLanguagelist">
-                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
-                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
-                </select>
-            </div>
-        </div>
-        <div class="ec-base-button">
-            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/link/btn_go.gif" alt="GO" /></a>
-        </div>
-        <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" width="13" height="13" alt="close" /></a>
-    </div>
-</div>
 
 <div module="Layout_conversionPc">
     <!--@css(/css/module/layout/conversionpc.css)-->
     <a href="{$mobile_url}">모바일 화면보기</a>
 </div>
+
 </body>
 </html>

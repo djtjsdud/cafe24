@@ -60,3 +60,13 @@ setTimeout(()=> {
         },
     });
 }, 500);
+
+// 미들배너 슬라이드
+
+var middleSwiper = new Swiper("#middle-swiper.mySwiper", {
+    loop: true,
+    navigation: {
+        nextEl: "#middle-swiper .swiper-button-next",
+        prevEl: "#middle-swiper .swiper-button-prev",
+    },
+});
