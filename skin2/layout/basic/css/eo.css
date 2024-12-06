@@ -23,7 +23,18 @@ a:hover{
     width: 1680px;
     margin: 0 auto;
 }
-/* 상품 레이아웃 */
+
+/* 공통 레이아웃 */
+.section-title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+/* 상품 공통 레이아웃 */
+.ec-base-product {
+    margin: 0;
+}
 .ec-base-product .prdList {
     margin: 0;
     gap: 1rem;
@@ -44,6 +55,11 @@ a:hover{
     position: absolute;
     bottom: 16px;
     right: 16px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.ec-base-product .prdList .thumbnail:hover .button{
+    opacity: 100%;
 }
 .ec-base-product .prdList .thumbnail .button img {
     margin: 0;
@@ -450,7 +466,7 @@ a:hover{
     font-size: .875rem;
 }
 
-.swiper-slide::after {
+.visual .swiper-slide::after {
     content: '';
     position: absolute;
     top: 0;
@@ -478,7 +494,7 @@ a:hover{
     z-index: 2;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-main-text{
-    font-size: 3.125rem;
+    font-size: 3rem;
     margin-bottom: .375rem;
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text .slide-sub-text{
@@ -486,7 +502,7 @@ a:hover{
 }
 .visual .swiper .swiper-wrapper .swiper-slide .slide-text2{
     text-align: center;
-    left: calc(50% - 275px);
+    left: calc(50% - 230px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -522,6 +538,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10rem 0 5rem;
 }
 .tab-box .tab-menu-box{
     width: 18%;
@@ -553,7 +570,6 @@ a:hover{
 .tab-box .tab-content{
     width: 82%;
     max-width: 1380px;
-    min-height: 510px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -618,6 +634,7 @@ a:hover{
 .limit{
     display: flex;
     justify-content: space-between;
+    padding: 5rem 0;
 }
 .limit .left,
 .limit .right{
@@ -633,14 +650,10 @@ a:hover{
     justify-content: center;
     position: relative;
 }
-.limit .edition1{
-    background: url("/images/edition1-bg-img.jpg") no-repeat center / cover;
+.limit .edition:hover::after{
+    background: rgba(0, 0, 0, 0.5);
 }
-.limit .edition2{
-    background: url("/images/edition2-bg-img.jpg") no-repeat center / cover;
-}
-.limit .edition1::after,
-.limit .edition2::after{
+.limit .edition::after{
     content: '';
     position: absolute;
     top: 0;
@@ -649,6 +662,13 @@ a:hover{
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* 검정색 반투명 딤드 효과 */
     z-index: 1; /* 이미지 위에 위치하도록 설정 */
+    transition: all 0.2s ease-in-out;
+}
+.limit .edition1{
+    background: url("/images/edition1-bg-img.jpg") no-repeat center / cover;
+}
+.limit .edition2{
+    background: url("/images/edition2-bg-img.jpg") no-repeat center / cover;
 }
 .limit .edition .img-box{
     display: flex;
@@ -694,18 +714,12 @@ a:hover{
 /* 러쉬 랭킹 영역 */
 
 .ranking{
-    padding: 80px 0;
+    padding: 5rem 0;
 }
 .ranking .ranking-box{
     display: flex;
     gap: 70px;
     justify-content: space-between;
-}
-.ranking .ranking-title{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 300;
-    padding-bottom: 50px;
 }
 .ranking .ranking-left{
     width: 41%;
@@ -817,15 +831,110 @@ a:hover{
 
 /* 미들 배너 영역 */
 
+#middle-swiper{
+    width: 100%;
+    height: 280px;
+    padding: 5rem 0;
+}
+#middle-swiper .swiper-wrapper .swiper-slide{
+    position: relative;
+}
 #middle-swiper .swiper-wrapper .swiper-slide::after{
     content: "";
     position: absolute;
+    width: 100%;
+    height: 100%;
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
-#middle-swiper .swiper-wrapper .swiper-slide img{
+#middle-swiper .swiper-wrapper .swiper-slide.middle-bg1{
+    background: url("/images/middle-bg1.jpg") no-repeat center / cover;
+}
+#middle-swiper .swiper-wrapper .swiper-slide.middle-bg2{
+    background: url("/images/middle-bg2.jpg") no-repeat center / cover;
+}
+#middle-swiper .swiper-wrapper .swiper-slide.middle-bg3{
+    background: url("/images/middle-bg3.jpg") no-repeat center / cover;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner{
+    position: relative;
+    display: flex;
+    gap: 300px;
+    z-index: 2;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-img-box{
+    width: 230px;
+    display: block;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-img-box img{
+    width: 100%;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-text-box .product-name{
+    font-size: 2.25rem;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-text-box .product-de{
+    font-size: 1rem;
+    margin-bottom: 24px;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-text-box .more-btn{
+    width: fit-content;
+}
+#middle-swiper .swiper-wrapper .swiper-slide .middle-inner .middle-text-box .more-btn::after{
+    content: "";
     display: block;
     width: 100%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 8px;
+}
+
+/* 리뷰 영역 */
+#review-swiper{
+    padding: 80px 0;
+    width: 100%;
+}
+#review-swiper .swiper-slide .img-box{
+    position: relative;
+}
+#review-swiper .swiper-slide .img-box::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    background: linear-gradient(180deg, rgba(102, 102, 102, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);    pointer-events: none; 
+    content: '';
+}
+#review-swiper .swiper-slide .review-text{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+#review-swiper .swiper-slide .review-text > a{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: #fff;
+}
+#review-swiper .swiper-slide .review-text > a .review-main{
+    font-size: 1.5rem;
+}
+#review-swiper .swiper-slide .review-text > a .review-detail{
+    font-size: 1rem;
+}
+#review-swiper .swiper-slide {
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+#review-swiper .swiper-slide.swiper-slide-active{
+    opacity: 1;
 }

@@ -3,7 +3,7 @@
 <!--edibot_skin_data:{"width":1014,"mo_width":640}-->
 <section class="visual">
     <div app4you-smart-banner="smart-banner-admin-PC00001" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-PC00001" data-banner-name="메인상단배너">
-        <div id="main_slide" class="swiper mySwiper">
+        <div id="main-slide" class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="banner-img"><img src="/layout/basic/images/mainbanner-1.jpg" alt="첫 번째 메인배너 이미지입니다."></div>
@@ -17,8 +17,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <img src="/layout/basic/images/mainbanner-2.jpg" alt="두 번째 메인배너 이미지입니다.">
-                    <div class="slide-text slide-text2">
+                    <img src="/layout/basic/images/mainbanner-2.jpg" alt="두 번째 메인배너 이미지입니다."><div class="slide-text slide-text2">
                         <p class="slide-main-text">제주에서 즐기는 발멍</p>
                         <p class="slide-sub-text">오직 러쉬 제주점에서만 만나볼 수 있는 특별한 족욕 공간</p>
                         <div class="more-btn">
@@ -1107,7 +1106,7 @@
     <!-- 러쉬 랭킹 영역 -->
     
     <div class="ranking">
-        <h2 class="ranking-title">LUSH RANKING</h2>
+        <h2 class="section-title">LUSH RANKING</h2>
         <div class="ranking-box">
             <div class="ranking-left">
             <div module="product_listmain_5" class="ec-base-product">
@@ -1609,27 +1608,145 @@
         </div>
         </div>
     </div>
+</section>
 
-    <!-- 미들배너  -->
+<section class="full-container">
+
+    <!-- 미들배너 영역-->
     <div id="middle-swiper" class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/images/middle-bg1.jpg" alt="첫 번째 미들배너 이미지입니다.">
-                <a href="#none" class="inner">
-                    <span class="middle-img-box"><img src="/web/product/big/middlebanner-product-img.png" alt=""></span>
+            <div class="swiper-slide middle-bg1">
+                <a href="#none" class="middle-inner">
+                    <span class="middle-img-box"><img src="/images/middlebanner-product-img.png" alt="첫 번째 미들배너 제품 이미지입니다."></span>
                     <span class="middle-text-box">
-                        <span>MASK OF MAGNAMINTY</span>
-                        <span>페퍼민트의 쿨함과 꿀의 촉촉함이 더해진 워시 오브 팩</span>
+                        <span class="product-name">MASK OF MAGNAMINTY</span>
+                        <span class="product-de">페퍼민트의 쿨함과 꿀의 촉촉함이 더해진 워시 오브 팩</span>
+                        <span class="more-btn">View More +</span>
                     </span>
-                    <span class="more-btn">View More +</span>
                 </a>
             </div>
-            <div class="swiper-slide"><img src="/images/middle-bg2.jpg" alt="두 번째 미들배너 이미지입니다."></div>
-            <div class="swiper-slide"><img src="/images/middle-bg3.jpg" alt="세 번째 미들배너 이미지입니다."></div>
+            <div class="swiper-slide middle-bg2">
+                <a href="#none" class="middle-inner">
+                    <span class="middle-img-box"><img src="/images/middlebanner-product-img3.png" alt="두 번째 미들배너 제품 이미지입니다."></span>
+                    <span class="middle-text-box">
+                        <span class="product-name">MASK OF MAGNAMINTY</span>
+                        <span class="product-de">페퍼민트의 쿨함과 꿀의 촉촉함이 더해진 워시 오브 팩</span>
+                        <span class="more-btn">View More +</span>
+                    </span>
+                </a>
+            </div>
+            <div class="swiper-slide middle-bg3">
+                <a href="#none" class="middle-inner">
+                    <span class="middle-img-box"><img src="/images/middlebanner-product-img2.png" alt="세 번째 미들배너 제품 이미지입니다."></span>
+                    <span class="middle-text-box">
+                        <span class="product-name">MASK OF MAGNAMINTY</span>
+                        <span class="product-de">페퍼민트의 쿨함과 꿀의 촉촉함이 더해진 워시 오브 팩</span>
+                        <span class="more-btn">View More +</span>
+                    </span>
+                </a>
+            </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-    
+
+    <!-- 리뷰 영역 -->
+    <div id="review-swiper">
+        <h2 class="section-title">CUSTOMER REVIEW</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img1.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img2.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img3.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img4.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img5.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img-box">
+                        <a href="#none"><img class="d-block" src="/images/review-img6.jpg" alt="첫 번째 리뷰 이미지입니다."></a>
+                    </div>
+                    <div class="review-text">
+                        <a>
+                            <span class="d-block">
+                                <span class="review-product-name d-block mb-2">제품 이름</span>
+                                <span class="review-main d-block">후기 제목입니다.</span>
+                            </span>
+                            <span class="review-detail d-block">후기 상세 내용입니다.</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<section class="container noto-sans-kr-400">
     <div module="product_listmain_6" class="ec-base-product">
         <!--
             $count = 8
@@ -1758,7 +1875,6 @@
         </ul>
     </div>
 </section>
-
 
 <!-- <div id="boardArea">
     <div module="board_listpackage_5"> -->

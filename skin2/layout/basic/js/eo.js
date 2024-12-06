@@ -1,19 +1,19 @@
 
 // 메인배너 슬라이드
 
-var swiper = new Swiper("#main_slide.mySwiper", {
+var swiper = new Swiper("#main-slide.mySwiper", {
     loop: true,
     // autoplay: {
     //     delay: 2500,
     //     disableOnInteraction: false,
     // },
     pagination: {
-        el: "#main_slide .swiper-pagination",
+        el: "#main-slide .swiper-pagination",
         type: "fraction",
     },
     navigation: {
-        nextEl: "#main_slide .swiper-button-next",
-        prevEl: "#main_slide .swiper-button-prev",
+        nextEl: "#main-slide .swiper-button-next",
+        prevEl: "#main-slide .swiper-button-prev",
     },
 });
 
@@ -68,5 +68,18 @@ var middleSwiper = new Swiper("#middle-swiper.mySwiper", {
     navigation: {
         nextEl: "#middle-swiper .swiper-button-next",
         prevEl: "#middle-swiper .swiper-button-prev",
+    },
+});
+
+// 리뷰 슬라이드
+
+var reviewSwiper = new Swiper("#review-swiper .mySwiper", {
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 60,
+    centeredSlides: true,
+    navigation: {
+        nextEl: "#review-swiper .swiper-button-next",
+        prevEl: "#review-swiper .swiper-button-prev",
     },
 });
