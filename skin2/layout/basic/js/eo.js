@@ -59,6 +59,17 @@ setTimeout(()=> {
             clickable: true,
         },
     });
+
+    const giftSwiper = new Swiper("#gift-swiper .mySwiper", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 24,
+        centeredSlides: true,
+        navigation: {
+            nextEl: "#gift-swiper .swiper-button-next",
+            prevEl: "#gift-swiper .swiper-button-prev",
+        },
+    });
 }, 500);
 
 // 미들배너 슬라이드
@@ -83,16 +94,3 @@ var reviewSwiper = new Swiper("#review-swiper .mySwiper", {
         prevEl: "#review-swiper .swiper-button-prev",
     },
 });
-
-// 기프트 슬라이드
-
-var giftSwiper = new Swiper("#gift-swiper .mySwiper", {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 24,
-    centeredSlides: true,
-    navigation: {
-        nextEl: "#gift-swiper .swiper-button-next",
-        prevEl: "#gift-swiper .swiper-button-prev",
-    },
-}, 500);
