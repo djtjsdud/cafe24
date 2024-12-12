@@ -60,14 +60,14 @@ setTimeout(()=> {
         },
     });
 
-    const giftSwiper = new Swiper("#gift-swiper .mySwiper", {
+    const giftSwiper = new Swiper("#gift .gift-swiper", {
         loop: true,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 24,
         centeredSlides: true,
         navigation: {
-            nextEl: "#gift-swiper .swiper-button-next",
-            prevEl: "#gift-swiper .swiper-button-prev",
+            nextEl: "#gift .gift-swiper .swiper-button-next",
+            prevEl: "#gift .gift-swiper .swiper-button-prev",
         },
     });
 }, 500);
