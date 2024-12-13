@@ -22,7 +22,7 @@
 #header .link .xans-layout-bookmark span { padding-left:17px; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_bookmark.png") no-repeat 0 1px; }
 
 #wrap { position:relative; width:100%; margin:27px auto 0; }
-#container { width:1680px; margin:0 auto; *zoom:1;}
+#container { width:1280px; margin:0 auto; *zoom:1;}
 #container:after { content:""; display:block; clear:both; }
 #sidebar { float:left; width:180px; }
 #sidebar .banner { padding:0 0 20px; border-bottom:1px solid #e8e8e8; }

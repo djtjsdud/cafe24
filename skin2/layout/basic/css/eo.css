@@ -2,16 +2,11 @@ body, html{
     font-size: 16px;
     letter-spacing: -0.025rem;
 }
-a{
-    display: block;
-}
 a:hover{
     text-decoration: none;
 }
 #main #wrap{
     margin: 0;
-}
-#main #wrap #container{
     width: 100%;
 }
 #main #wrap #container #contents{
@@ -23,7 +18,9 @@ a:hover{
     width: 1680px;
     margin: 0 auto;
 }
-
+#main .sub-container{
+    width: 1600px;
+}
 /* 공통 레이아웃 */
 .section-title{
     text-align: center;
@@ -916,8 +913,9 @@ a:hover{
 }
 #review-swiper .swiper-slide .review-text{
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
 }
 #review-swiper .swiper-slide .review-text > a{
     display: flex;
@@ -930,6 +928,11 @@ a:hover{
 }
 #review-swiper .swiper-slide .review-text > a .review-detail{
     font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #review-swiper .swiper-slide {
     opacity: 0.2;
@@ -981,7 +984,7 @@ a:hover{
 }
 .gift-swiper .swiper-slide .list-box .inner-box .inner .t01{
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .gift-swiper .swiper-slide .list-box .inner-box .inner .t02{
     font-size: 1rem;
@@ -1000,15 +1003,30 @@ a:hover{
 }
 .gift-swiper .swiper-slide .inner-flex .ec-base-product .prdList .thumbnail {
     background-color: #fff;
-    width: 160px;
+    width: 250px;
 }
-.gift-swiper .swiper-slide .inner-flex .ec-base-product .prdList li{
+.gift-swiper .swiper-slide.four-product-slide .inner-flex .ec-base-product .prdList > li .thumbnail{
+    width: 180px;
+}
+.gift-swiper .swiper-slide .inner-flex .ec-base-product .prdList > li{
     margin: 0;
     display: flex;
     gap: 1rem;
 }
-.gift-swiper .swiper-slide .inner-flex .ec-base-product .prdList li .description{
+.gift-swiper .swiper-slide .inner-flex .ec-base-product .prdList > li .description{
     padding: 1rem 0;
+}
+.gift-swiper .swiper-slide .inner-flex .description .spec li:nth-child(1){
+    display: inline-block;
+}
+.gift-swiper .swiper-slide .inner-flex .description .spec li:nth-child(1) span{
+    text-decoration: line-through;
+}
+.gift-swiper .swiper-slide .inner-flex .description .spec li:nth-child(2) span .discount-text{
+    transform: translateX(0);
+}
+.gift-swiper .ec-base-product .prdList .thumbnail .button .likeButton img:nth-child(2){
+    display: none;
 }
 
 /* 미디어 영역 */
