@@ -94,3 +94,15 @@ var reviewSwiper = new Swiper("#review-swiper .mySwiper", {
         prevEl: "#review-swiper .swiper-button-prev",
     },
 });
+
+// 셀렉트 박스
+
+var selectList = document.getElementById('select-list');
+var selectTitleBox = document.querySelector('.select-title-box');
+
+if (selectList && selectTitleBox) {
+    selectTitleBox.addEventListener('click', function() {
+        selectList.classList.toggle('cd-none');
+        selectTitleBox.classList.toggle('active');
+    });
+}
