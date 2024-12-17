@@ -1,3 +1,50 @@
+$(function(){
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('#header').addClass('fix');
+        }else{
+            $('#header').removeClass('fix');
+        }
+    });
+    $(window).on('resize', function() {
+        // 필요에 따라 헤더의 상태를 재조정
+        if ($(window).scrollTop() > 0) {
+            $('#header').addClass('fix');
+        } else {
+            $('#header').removeClass('fix');
+        }
+    });
+    
+    jQuery(window).scroll(function() {
+		var header_height = jQuery('#header .topArea').innerHeight();
+		var jh_offset = jQuery('.tabProduct_box').offset();
+		if ((jQuery(document).scrollTop() + header_height) >= jh_offset.top ) {
+			jQuery('#tabProduct').addClass('tab_fixed');
+			jQuery('#tabProduct').css('top',header_height + 0);
+		} else {
+			jQuery('#tabProduct').removeClass('tab_fixed');
+		}
+	});
+
+    // 상품상세 탭 이벤트
+    $('#tabProduct a').click(function(e){
+		var header_height = jQuery('#header .topArea').innerHeight();
+        var oTarget = $(this).attr('href');
+		var offset = $('.xans-product-additional').offset(); //선택한 태그의 위치를 반환
+		$('html').animate({scrollTop : offset.top - header_height}, 400);
+        $(this).parent('li').addClass('selected').siblings().removeClass('selected');
+        $('#tabProduct a').each(function(){
+            var oSiblings = $(this).attr('href');
+            if (oTarget != oSiblings) {
+                $(oSiblings).hide();
+            } else {
+                $(oTarget).show();
+            }
+        });
+        removePagingArea(oTarget);
+        if(e) e.preventDefault();
+    });
+});
 
 // 메인배너 슬라이드
 
