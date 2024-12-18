@@ -1059,16 +1059,16 @@ a:hover{
     display: block;
     position: relative;
 }
-.title div .banner-dimmed{
+.title .banner-dimmed{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-.title div .banner-dimmed img{
+.title .banner-dimmed img{
     width: 100%;
 }
-.title div .banner-dimmed::after{
+.title .banner-dimmed::after{
     content: "";
     display: block;
     background: rgba(0, 0, 0, 0.4);
@@ -1305,6 +1305,17 @@ a:hover{
     z-index: 2;
 }
 
+/* 제품 상세페이지 */
+#detail .thumbnail > a #zoomMouseGiude{
+    display: none !important;
+}
+#detail .xans-product-detail .headingArea {
+    border-bottom: none;
+}
+#detail .xans-product-detail .imgArea .xans-product-action,
+#detail .xans-product-detail .imgArea .control {
+    display: none;
+}
 
 /* 상세페이지 탭 */
 .tabProduct_box {height:61px;margin:0 auto 90px;}
