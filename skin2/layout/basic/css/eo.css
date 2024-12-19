@@ -1316,6 +1316,12 @@ a:hover{
 #detail .xans-product-detail .imgArea .control {
     display: none;
 }
+#detail .xans-product-detail .detailArea {
+    display: flex;
+}
+#detail .xans-product-detail .imgArea{
+    float: none;
+}
 
 /* 상세페이지 탭 */
 .tabProduct_box {height:61px;margin:0 auto 90px;}
