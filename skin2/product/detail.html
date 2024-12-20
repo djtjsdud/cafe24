@@ -582,6 +582,7 @@
 
 
                 <div module="product_action">
+                    <div id="ec-product-price-info" class="displaynone" ec-data-custom="{$product_custom}"ec-data-price="{$product_price}"></div>
                     <div class="ec-base-button gColumn">
                         <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}">
                             <span id="{$btn_buy_id}">바로 구매하기</span>
@@ -935,3 +936,5 @@
         </div><!-- //prdInfo -->
     </div>
 </div>
+
+<!--@js(/js/module/product/sale_price.js)-->

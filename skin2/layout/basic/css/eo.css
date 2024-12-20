@@ -1322,6 +1322,24 @@ a:hover{
 #detail .xans-product-detail .imgArea{
     float: none;
 }
+#detail .xans-product-detail .infoArea tr:nth-child(3),
+#detail .xans-product-detail .infoArea tr:nth-child(4){
+    display: inline-block;
+}
+#detail .xans-product-detail .infoArea tr:nth-child(1) th,
+#detail .xans-product-detail .infoArea tr:nth-child(2) th,
+#detail .xans-product-detail .infoArea tr:nth-child(3) th,
+#detail .xans-product-detail .infoArea tr:nth-child(4) th{
+    display: none;
+}
+#detail .xans-product-detail .infoArea tr:nth-child(2) td{
+    width: 100%;
+}
+
+
+#detail  .xans-product-detail .infoArea td {
+    padding: 0;
+}
 
 /* 상세페이지 탭 */
 .tabProduct_box {height:61px;margin:0 auto 90px;}
