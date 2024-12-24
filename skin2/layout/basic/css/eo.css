@@ -1458,6 +1458,9 @@ a:hover{
     text-align: center;
     border: none;
 }
+.ec-base-button[class*="gColumn"] [class^='btn'] {
+    background-color: #000;
+}
 
 /* 상세페이지 탭 */
 .tabProduct_box {height:61px;margin:0 auto 90px;}
