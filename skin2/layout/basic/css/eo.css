@@ -1389,6 +1389,7 @@ a:hover{
 #detail #totalProducts > table > tbody > tr:first-child > td {
     border: none;
     padding: 1.2rem 1.6rem;
+    font-size: 14px;
 }
 #detail .xans-product-detail .infoArea .guideArea {
     margin: 0;
@@ -1431,7 +1432,7 @@ a:hover{
     background: #000;
     content: '';
 }
-#totalProducts tbody td .quantity a > img {
+#detail #totalProducts tbody td .quantity a > img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -1440,7 +1441,7 @@ a:hover{
     z-index: 10;
     opacity: .00001;
 }
-#totalProducts tbody td .quantity {
+#detail #totalProducts tbody td .quantity {
     display: inline-block;
     width: 95px !important;
     height: 28px;
@@ -1448,7 +1449,7 @@ a:hover{
     position: relative;
     box-sizing: border-box;
 }
-#totalProducts tbody td .quantity input {
+#detail #totalProducts tbody td .quantity input {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.55;
@@ -1458,8 +1459,48 @@ a:hover{
     text-align: center;
     border: none;
 }
-.ec-base-button[class*="gColumn"] [class^='btn'] {
+#detail .xans-product-detail .infoArea .xans-product-action {
+    border-top: none;
+}
+#detail .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#detail #totalProducts table .right {
+    color: #000;
+}
+#detail #totalProducts table .right .quantity_price{
+    font-weight: 400;
+}
+#detail .totalPrice .total {
+    color: #000;
+    
+}
+#detail .totalPrice strong {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+.infoArea .xans-product-action .ec-base-button a:nth-child(1){
+    border: solid 1px #000;
+}
+.infoArea .xans-product-action .ec-base-button a:nth-child(2){
+    border: solid 1px #000;
+}
+.infoArea .xans-product-action .ec-base-button a:nth-child(3){
+    display: inline-block;
     background-color: #000;
+    transition: all 0.2s;
+}
+.infoArea .xans-product-action .ec-base-button a:nth-child(3):hover{
+    background-color: #666666;
+}
+.infoArea .xans-product-action .ec-base-button a:first-child{
+    max-width: 80px;
+}
+#detail .xans-product-detail .infoArea .wish img {
+    width: 24px;
 }
 
 /* 상세페이지 탭 */
